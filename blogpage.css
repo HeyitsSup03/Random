@@ -1,0 +1,157 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e0f7fa; /* Light blue background */
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0277bd; /* Dark blue for nav bar */
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .nav__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    margin: 0 10px;
+  }
+  
+  .nav__links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav__links a:hover {
+    text-decoration: underline;
+  }
+  
+  .nav__actions {
+    display: flex;
+  }
+  
+  .nav__actions .btn {
+    background-color: #039be5; /* Medium blue for buttons */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .nav__actions .btn:hover {
+    background-color: #0288d1; /* Slightly darker blue for hover */
+  }
+  
+  main {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #01579b; /* Darker blue for headings */
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea,
+  .form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  button.btn {
+    background-color: #039be5; /* Medium blue for buttons */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  button.btn:hover {
+    background-color: #0288d1; /* Slightly darker blue for hover */
+  }
+  
+  .blog-posts {
+    margin-top: 20px;
+  }
+  
+  .post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .post h2 {
+    margin-bottom: 10px;
+    color: #0277bd; /* Dark blue for post titles */
+  }
+  
+  .post p {
+    margin-bottom: 10px;
+  }
+  
+  .post-images {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .post-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  

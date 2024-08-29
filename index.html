@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SegMedi - Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop class="background-video">
+        <source src="assets/medvid2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="left-section">
+            <div class="logo">
+                <img src="assets/segmedi.png" alt="SegMedi Logo">
+                <h2>SegMedi</h2>
+            </div>
+            <img src="assets/doctor.png" alt="Doctor" class="doctor-image">
+            <p class="copyright">© 2019, SegMedi. All rights reserved.</p>
+        </div>
+        <div class="right-section">
+            <div class="form-container">
+                <div class="tab">
+                    <a href="#" class="active" id="signup-tab">Sign Up</a>
+                    <a href="#" id="signin-tab">Sign In</a>
+                </div>
+                <!-- Sign Up Form -->
+                <form id="signup-form" action="homepage.html" method="get" onsubmit="handleSignUp(event)">
+                    <div class="input-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" placeholder="Full Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Address@example.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Password">
+                    </div>
+                    <div class="button-container">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                    <a href="#" class="signin-link" id="switch-to-signin">I have an Account?</a>
+                </form>
+                <!-- Sign In Form -->
+                <form id="signin-form" style="display: none;">
+                    <div class="input-group">
+                        <label for="signin-email">Email</label>
+                        <input type="email" id="signin-email" placeholder="Address@example.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="signin-password">Password</label>
+                        <input type="password" id="signin-password" placeholder="Password">
+                    </div>
+                    <div class="button-container">
+                        <button type="submit">Sign In</button>
+                    </div>
+                    <a href="#" class="signin-link" id="switch-to-signup">Create an Account</a>
+                </form>
+            </div>
+            <div class="footer">
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p>9599123****</p>
+                    <p>info@segmedi.in</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to switch between forms and handle redirection -->
+    <script>
+        const signupForm = document.getElementById('signup-form');
+        const signinForm = document.getElementById('signin-form');
+        const signupTab = document.getElementById('signup-tab');
+        const signinTab = document.getElementById('signin-tab');
+        const switchToSignin = document.getElementById('switch-to-signin');
+        const switchToSignup = document.getElementById('switch-to-signup');
+
+        function handleSignUp(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Here you can add code to handle form data, e.g., validation or sending data to a server
+            
+            // Redirect to homepage
+            window.location.href = 'homepage.html'; // Replace with the actual path to your homepage
+        }
+
+        signupTab.addEventListener('click', (e) => {
+            e.preventDefault();
+            signupForm.style.display = 'block';
+            signinForm.style.display = 'none';
+            signupTab.classList.add('active');
+            signinTab.classList.remove('active');
+        });
+
+        signinTab.addEventListener('click', (e) => {
+            e.preventDefault();
+            signupForm.style.display = 'none';
+            signinForm.style.display = 'block';
+            signinTab.classList.add('active');
+            signupTab.classList.remove('active');
+        });
+
+        switchToSignin.addEventListener('click', (e) => {
+            e.preventDefault();
+            signupForm.style.display = 'none';
+            signinForm.style.display = 'block';
+            signinTab.classList.add('active');
+            signupTab.classList.remove('active');
+        });
+
+        switchToSignup.addEventListener('click', (e) => {
+            e.preventDefault();
+            signinForm.style.display = 'none';
+            signupForm.style.display = 'block';
+            signupTab.classList.add('active');
+            signinTab.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

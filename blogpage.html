@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="blogpage.css" />
+  <title>Blog - Share Your Experience</title>
+  <script>
+    function updatePostDate() {
+      const dateElements = document.querySelectorAll('.post-date');
+      const currentDate = new Date().toLocaleDateString();
+      dateElements.forEach(element => {
+        element.textContent = `Posted on ${currentDate}`;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', updatePostDate);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="nav__logo">BlogSite</div>
+      <ul class="nav__links">
+        <!-- Updated the Home link to point to homepage.html -->
+        <li class="link"><a href="homepage.html">Home</a></li>
+        <li class="link"><a href="about.html">About Us</a></li>
+        <li class="link"><a href="blogpage.html">Blog</a></li> <!-- Self-link to blog page -->
+        <li class="link"><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="signup.html" class="btn">Logout</a>
+      </div>
+    </nav>
+
+    <main>
+      <h1>Share Your Experience</h1>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div class="form-group">
+          <label for="content">Content:</label>
+          <textarea id="content" name="content" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="images">Upload Images:</label>
+          <input type="file" id="images" name="images" accept="image/*" multiple />
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+      <div class="blog-posts">
+        <div class="post">
+          <h2>Experience Title</h2>
+          <p class="post-date"></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nunc vel laoreet convallis, nisi nunc viverra libero, sed aliquet elit velit nec mauris. Proin vulputate nulla sit amet ante luctus, nec hendrerit purus aliquet.</p>
+          <div class="post-images">
+            <img src="assets/image1.jpg" alt="Experience Image 1" />
+            <img src="assets/image2.jpg" alt="Experience Image 2" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

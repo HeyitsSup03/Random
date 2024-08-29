@@ -1,0 +1,160 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    height: 550px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.left-section {
+    width: 50%;
+    background: linear-gradient(to bottom right, #437ef7, #56b4ff);
+    padding: 30px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.right-section {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.form-container .tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-container .tab a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.form-container .tab a.active {
+    border-bottom: 2px solid #437ef7;
+    color: #437ef7;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #6c757d;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #437ef7;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3566cc;
+}
+
+.signin-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #437ef7;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.footer .social-media a {
+    color: #6c757d;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer .contact-info p {
+    margin: 5px 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.logo img {
+    width: 80px; /* Adjust the width to make the logo smaller */
+    height: auto; /* This will maintain the aspect ratio */
+    margin-bottom: 10px; /* Optional: Adjust space around the logo if needed */
+}
+
+.logo h2 {
+    font-size: 18px; /* Adjust the text size if necessary */
+    margin: 0; /* Remove margin to align with the logo */
+}
+
+.doctor-image {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px;
+}
